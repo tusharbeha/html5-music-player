@@ -1,0 +1,164 @@
+body{
+	font-family: helvetica;
+	background-image: url("../images/background-red.jpg");
+}
+
+
+.main{
+	position: relative;
+	width: 70%;
+	height: 700px;
+	margin: 5% 15%;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: white;
+}
+
+.container{
+	position: absolute;
+	height: 600px;
+	width: 100%;
+	overflow-y: scroll;
+	margin-top: 100px;
+}
+
+.hidden{
+	text-align: center;
+}
+
+.dragged{
+	background-color: lightblue;
+}
+
+#list li{
+	list-style:decimal;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	line-height: 40px;
+	
+}
+.selected{
+	background-color: #5cb85c;
+	color: #fff;
+}
+#list li:active, #list li:hover{
+	background-color: #5cb85c;
+	color: #fff;
+	cursor: pointer;	
+}
+
+.player-control{
+	background-color: rgba(0,0,0,0.4);
+	height: 100px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.player-control ul{
+	list-style: none;
+	margin: 0 auto;
+}
+
+.player-control ul li{
+	float: left;
+	display: inline;
+	margin: 20px 2% auto 2%; 
+}
+
+button{
+	height: 64px;
+	width: 64px;
+	background-color: #fff;
+	border-radius: 65px;
+	-moz-border-radius: 65px;
+	-webkit-border-radius: 65px;
+	border: none;
+}
+
+button:hover, button:active{
+	background-color: #5cb85c;
+}
+
+.btn-prev{
+	background-image: url("../images/previous.png");
+	background-size: 64px 64px;
+}
+.btn-play{
+	background-image: url("../images/play.png");
+	background-size: 64px 64px;
+}
+.btn-stop{
+	background-image: url("../images/stop.png");
+	background-size: 64px 64px;
+}
+.btn-next{
+	background-image: url("../images/next.png");
+	background-size: 64px 64px;
+}
+@-webkit-keyframes back {
+	0%{
+		background-color: red;
+		transform: scale(.5);
+	}
+	25%{
+		background-color: blue;
+		transform: scale(1.5);
+	}
+	50%{
+		background-color: green;
+		transform: scale(.5);
+	}
+	75%{
+		background-color: yellow;
+		transform: scale(1.5);
+	}
+	100%{
+		background-color: gray;
+		transform: scale(.5);
+	}
+}
+
+@keyframes back {
+	0%{
+		background-color: red;
+		transform: scale(.5);
+		transform: transition(100px);
+	}
+	25%{
+		background-color: blue;
+		transform: scale(1.5);
+	}
+	50%{
+		background-color: green;
+		transform: scale(.5);
+	}
+	75%{
+		background-color: yellow;
+		transform: scale(1.5);
+	}
+	100%{
+		background-color: gray;
+		transform: scale(.5);
+		-webkit-transform: rotate(180deg);
+		
+	}
+}
+
+.now-playing{
+	position: relative;
+	height: 100px;
+	margin-left: 50%;
+}
+.now-playing p{
+	position: relative;
+	top: 40px;
+	-webkit-animation: back 5s infinte;
+	animation: back 5s infinte;
+	
+}
+
